@@ -8,7 +8,15 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "frame-ancestors https://address-iframe.onrender.com/*",
+            value: "frame-ancestors https://address-iframe.onrender.com/",
+          },
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "https://address-iframe.onrender.com",
+          },
+          {
+            key: "Vary",
+            value: "Origin",
           },
         ],
       },
