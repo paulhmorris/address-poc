@@ -1,9 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  headers: {
-    "Content-Security-Policy":
-      "frame-ancestors https://address-iframe.onrender.com",
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: "frame-ancestors https://address-iframe.onrender.com/*",
+          },
+        ],
+      },
+    ];
   },
 };
 
