@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply p-6 text-base h-full font-tide;
+  }
+
+  body {
+    @apply relative text-primary;
+  }
+}
