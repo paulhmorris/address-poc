@@ -5,7 +5,7 @@
 @layer base {
   html,
   body {
-    @apply p-6 text-base h-full font-tide;
+    @apply text-base h-full font-tide;
   }
 
   body {
